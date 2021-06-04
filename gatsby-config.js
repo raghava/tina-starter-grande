@@ -23,7 +23,19 @@ module.exports = {
             },
           },
         },
-        plugins: ["gatsby-tinacms-git", "gatsby-tinacms-remark"],
+        plugins: [
+          {
+            "resolve": "gatsby-tinacms-git",
+            "options": {
+              "gitRemote": "git@github.com:raghava/tina-starter-grande.git",
+              "defaultCommitMessage": "Edited with TinaCMS",
+              "defaultCommitName": "Cloud Editor",
+              "defaultCommitEmail": "raghava.kotekar@gmail.com"
+            }
+          },
+          "gatsby-tinacms-remark",
+          "gatsby-tinacms-json"
+        ],
       },
     },
     {
